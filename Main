@@ -1,75 +1,40 @@
 package jump2java;
-
 import java.util.Scanner;
 
-
-
 class Bias {
-
 	String name;
 
-	
-
 	Bias(String a) {
-
 		name = a;
-
 	}
 
 	void info() {
-
 		System.out.println(name + " 을(를) 선택 하셨습니다");
-
 	}
-
 	public String Favorite(String name) {
-
 	    if (name.equals("아이")) {
-
 	        return "아이";
-
 	    } else if (name.equals("레제")) {
-
 	        return "레제";
-
 	    } else if (name.equals("마린")) {
-
 	        return "마린";
-
 	    } else if (name.equals("카오루코")){
-
 	        return "카오루코"; // 일치하는 이름이 없을 때 기본값
-
 	    } else {
-
 	    	return"없음";
-
 	    }
-
 	}
-
 	}
 
 public class Main {
-
-
-
 	public static void main(String[] args) {
-
 		// TODO Auto-generated method stub
-
 		Scanner sc = new Scanner(System.in);
-
 		System.out.print("아이,레제,마린,카오루코 중 최애를 입력하시오: ");
-
 		String name = sc.next();
-
 		Bias bi = new Bias (name);
-
 		bi.info();
-
 		System.out.println(bi.Favorite(name) + "는 당신의 최애");
-
 		sc.close();
 
 		
